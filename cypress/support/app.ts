@@ -1,7 +1,18 @@
 declare namespace Cypress {
   interface Chainable {
+    /**
+     * Navigate to the homepage
+     */
     visitHomePage(): Chainable<Element>
+
+    /**
+     * Navigate to the login page
+     */
     visitLoginPage(): Chainable<Element>
+
+    /**
+     * Navigate to the feedbackpage
+     */
     visitFeedbackPage(): Chainable<Element>
   }
 }
