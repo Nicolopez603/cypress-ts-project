@@ -8,5 +8,5 @@
     "types": ["cypress"],
   },
   "include": ["**/*.ts"],
-  "exclude": []
+  "exclude": ["node_modules"]
 }
