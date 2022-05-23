@@ -14,6 +14,11 @@ declare namespace Cypress {
      * Navigate to the feedbackpage
      */
     visitFeedbackPage(): Chainable<Element>
+
+    /**
+     * @param second- how many seconds should the execution wait
+     */
+    waitForSeconds(seconds: number): Chainable<Element>
   }
 }
 
@@ -21,10 +26,14 @@ Cypress.Commands.add('visitHomePage', () => {
   cy.visit('http://zero.webappsecurity.com/')
 })
 
-Cypress.Commands.add('visitLoginPage',()=>{
+Cypress.Commands.add('visitLoginPage', () => {
   cy.visit('http://zero.webappsecurity.com/login.html')
 })
 
-Cypress.Commands.add('visitFeedbackPage',()=>{
+Cypress.Commands.add('visitFeedbackPage', () => {
   cy.visit('http://zero.webappsecurity.com/feedback.html')
+})
+
+Cypress.Commands.add('waitForSeconds', (seconds) => {
+  cy.wait(seconds * 1000)
 })
